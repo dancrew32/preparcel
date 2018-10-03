@@ -1,7 +1,5 @@
 import { h, render } from 'preact';
 
-render((
-  <div id="foo">
-    Preact
-  </div>
-), document.body);
+const Clock = () => <div>{new Date().toLocaleTimeString()}</div>;
+
+render(<Clock />, document.body);
